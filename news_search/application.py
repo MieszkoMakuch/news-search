@@ -4,7 +4,7 @@ import threading
 
 from flask import Flask, request, render_template, redirect, url_for
 
-from news_search.article_analyzer import analyze_article
+from news_search.fakenews_detector import analyze_article
 from news_search.config import Config, initialize_application_config, prevent_herokuapp_from_sleeping
 from news_search.search_engine import search_engine
 

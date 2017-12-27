@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
 
-                <img src="../static/img/owl.png" style="max-width: 85%;">
+                <a href="/"><img src="../static/img/owl.png" style="max-width: 85%;"></a>
             </div>
         </div>
 
@@ -16,8 +16,7 @@
                         <div class="input-group col-md-8 col-md-offset-2">
                             <input class="form-control input-lg" name="query" autofocus required>
                             <div class="input-group-addon btn" onclick="document.forms[0].submit();return false;"
-                                 style="border: 0;">Search
-                            </div>
+                                 style="border: 0;">Search</div>
                         </div>
                     </div>
                 </form>
@@ -43,19 +42,21 @@
                     </div>
                     <div class="col-xs-12 col-sm-9 excerpet">
                         <h3 class="article-title"><a href="{{ article.url }}"
-                               title="{{ article.title }}">{{ article.title }}</a>
+                                                     title="{{ article.title }}">{{ article.title }}</a>
                         </h3>
                         <p class="article-url">{{ article.canonical_link }}</p>
                         <p>{{ (article.summary[:200] + '...') if article.summary|length > 300 else article.summary }}</p>
 
                         <div class="row">
-                            <a href="articles/show?url_to_clean={{ article.canonical_link }}" ><div class="col-xs-3"><i class="glyphicon glyphicon-eye-open"></i>
-                                <span>Check credibility</span></div></a>
+                            <a href="articles/show?url_to_clean={{ article.canonical_link }}">
+                                <div class="col-xs-3"><i class="glyphicon glyphicon-eye-open"></i>
+                                    <span>Check credibility</span></div>
+                            </a>
                             <div class="col-xs-3"><i class="glyphicon glyphicon-dashboard"></i>
                                 <span>Score: {{ '%.2f' % score }}</span></div>
                         </div>
-{#                        <span class="plus"><a href="#" title="Lorem ipsum"><i#}
-{#                                class="glyphicon glyphicon-plus"></i></a></span>#}
+                        {#                        <span class="plus"><a href="#" title="Lorem ipsum"><i#}
+                        {#                                class="glyphicon glyphicon-plus"></i></a></span>#}
                     </div>
                     <span class="clearfix borda"></span>
                 </article>
