@@ -1,0 +1,293 @@
+/* Wide styles */
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #f9f9f9;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.btn, .btn-lg, .input-lg {
+    border-radius: 3px;
+}
+
+.btn {
+    background-color: #9E9E9E;
+    color: #fff;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #737373;
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #cccccc;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #cccccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px #cccccc;
+}
+
+.form-control {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.btn-large {
+    font-size: 18px;
+    padding: 20px 50px;
+    margin: 5px 10px;
+}
+
+.btn-success {
+    background-color: rgba(108, 199, 108, 1.0);
+    background-image: none;
+    border: 0;
+    line-height: 1.8;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+    background-color: rgba(94, 182, 94, 1.0);
+    color: #fff;
+    border: 0;
+}
+
+/* Specific styles */
+.container.landing-page {
+    position: relative;
+    padding: 0px 15px 100px 15px;
+}
+
+.container.article-page {
+    padding: 20px 85px 50px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    /*font-family: 'Lora', serif;*/
+    letter-spacing: 0.01rem;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.article {
+    padding-top: 30px;
+}
+
+tr td:first-child {
+    width: 15%;
+}
+
+tr td:last-child {
+    max-width: 700px;
+}
+
+.table {
+    margin-bottom: 20px;
+    table-layout: fixed;
+    width: 100%;
+}
+
+/*
+Notification Template - V1.0
+Team - Mine Web Design
+Developed @ 05-01-2016
+follow us @minewebdesignn (twitter)
+*/
+
+.notify {
+    font-family: 'Hind Siliguri', open sans;
+}
+
+.title-notify {
+    padding: 0px 0px 15px;
+    text-align: center;
+}
+
+.panel-basic {
+    border-color: #ddd;
+    margin: 0 -85px 20px -85px;
+    background-color: #fff;
+}
+
+.panel-basic > .panel-heading {
+    border-color: #ddd;
+    padding: 20px 15px;
+}
+
+.panel-heading.soft {
+    background: #03A9F4;
+}
+
+.panel-heading.grip {
+    background: #F44336;
+}
+
+.panel-heading.hard {
+    background: #E91E63;
+}
+
+.notify-icon {
+    color: #fff;
+    padding: 0px 4px;
+    font-size: 4.7rem;
+}
+
+.notify-title-heading .heading {
+    font-size: 6.4rem;
+    color: #F0F8FF;
+    padding: 0px 3px;
+    font-weight: 500;
+}
+
+.notify-title-heading .close {
+    color: #F0F8FF;
+    opacity: 1;
+    font-weight: normal;
+}
+
+.notify-title-description {
+    color: #F0F8FF;
+    padding: 0px 65px;
+}
+
+.notify-description {
+    text-align: left;
+    padding: 20px 85px;
+}
+
+.notify-description p {
+    text-align: left;
+    padding: 0px 0px;
+    color: #7D7A7A;
+}
+
+/*
+Search results template
+*/
+
+.container {
+    margin-top: 20px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+hgroup {
+    padding-left: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+hgroup h1 {
+    font: 500 normal 1.625em inherit;
+    color: #2a3644;
+    margin-top: 0;
+    line-height: 1.15;
+}
+
+hgroup h2.lead {
+    font: normal normal 1.125em inherit;
+    color: #2a3644;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.search-result .thumbnail {
+    border-radius: 0 !important;
+}
+
+.search-result:first-child {
+    margin-top: 0 !important;
+}
+
+.search-result {
+    margin-top: 20px;
+}
+
+.search-result .col-md-2 {
+    border-right: 1px dotted #ccc;
+    min-height: 140px;
+}
+
+.search-result ul {
+    padding-left: 0 !important;
+    list-style: none;
+}
+
+.search-result ul li {
+    font: 400 normal .85em inherit;
+    line-height: 30px;
+}
+
+.search-result ul li i {
+    padding-right: 5px;
+}
+
+.search-result .col-md-7 {
+    position: relative;
+}
+
+.search-result h3 {
+    font: 500 normal 1.375em inherit;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+}
+
+.search-result .article-title {
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: unset;
+}
+
+.search-result .article-url {
+    color: #049c35;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-top: -8px;
+    margin-bottom: 4px;
+}
+
+.search-result h3 > a, .search-result i {
+    color: #248dc1 !important;
+}
+
+.search-result p {
+    font: normal normal 1.125em inherit;
+}
+
+.search-result span.plus {
+    position: absolute;
+    right: 0;
+    top: 126px;
+}
+
+.search-result span.plus a {
+    background-color: #248dc1;
+    padding: 5px 5px 3px 5px;
+}
+
+.search-result span.plus a:hover {
+    background-color: #414141;
+}
+
+.search-result span.plus a i {
+    color: #fff !important;
+}
+
+.search-result span.border {
+    display: block;
+    width: 97%;
+    margin: 0 15px;
+    border-bottom: 1px dotted #ccc;
+}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container landing-page">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="engine-name col-md-8 col-md-offset-2">
+                <h1 style=" font-size: 6.4rem;">{{ title }}</h1>
+
+                <p>{{ message|safe }}</p>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}

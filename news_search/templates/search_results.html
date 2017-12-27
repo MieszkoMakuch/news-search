@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container landing-page">
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+
+                <img src="../static/img/owl.png" style="max-width: 85%;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <form action="/search" method="get">
+                    <div class="form-group row" style="margin-top: 20px;margin-bottom: 40px">
+                        <div class="input-group col-md-8 col-md-offset-2">
+                            <input class="form-control input-lg" name="query" autofocus required>
+                            <div class="input-group-addon btn" onclick="document.forms[0].submit();return false;"
+                                 style="border: 0;">Search
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <hgroup class="mb20"></hgroup>
+        <hgroup class="mb20" style="border: none;">
+            <h1>Search Results</h1>
+            <h2 class="lead"><strong>{{ search_results|length }}</strong> results were found for the
+                search for <strong>{{ query }}</strong></h2>
+        </hgroup>
+        <section class="col-xs-12 col-md-12">
+
+            {% for score, article in search_results %}
+
+                <div class=flash>{{ message }}</div>
+                <article class="search-result row">
+                    <div class="col-xs-12 col-sm-3">
+                        <a href="{{ article.url }}" title="{{ article.title }}" class="thumbnail"><img
+                                src="{{ article.top_img }}"
+                                alt="Article top image"/></a>
+                    </div>
+                    <div class="col-xs-12 col-sm-9 excerpet">
+                        <h3 class="article-title"><a href="{{ article.url }}"
+                               title="{{ article.title }}">{{ article.title }}</a>
+                        </h3>
+                        <p class="article-url">{{ article.canonical_link }}</p>
+                        <p>{{ (article.summary[:200] + '...') if article.summary|length > 300 else article.summary }}</p>
+
+                        <div class="row">
+                            <a href="articles/show?url_to_clean={{ article.canonical_link }}" ><div class="col-xs-3"><i class="glyphicon glyphicon-eye-open"></i>
+                                <span>Check credibility</span></div></a>
+                            <div class="col-xs-3"><i class="glyphicon glyphicon-dashboard"></i>
+                                <span>Score: {{ '%.2f' % score }}</span></div>
+                        </div>
+{#                        <span class="plus"><a href="#" title="Lorem ipsum"><i#}
+{#                                class="glyphicon glyphicon-plus"></i></a></span>#}
+                    </div>
+                    <span class="clearfix borda"></span>
+                </article>
+
+            {% endfor %}
+
+        </section>
+    </div>
+{% endblock %}

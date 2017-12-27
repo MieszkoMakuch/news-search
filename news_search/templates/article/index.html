@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block body %}
+    <div class="container article-page">
+        <div class="panel-basic notify-panel">
+            <div class="panel-heading notify-heading grip" style="background-color:{{ article.bgcolor }};">
+                <!-- Notification Panel Title with Grip -->
+                <div class="notify-title-heading">
+                    <span class="glyphicon {{ article.icon }} notify-icon" aria-hidden="true"></span>
+                    <span class="heading">{{ article.verdict }}</span>
+
+                </div>
+                <div class="notify-title-description">
+                    <span>{{ article.description }}</span>
+                </div>
+            </div>
+            <div class="notify-description">
+                <p><b>Analysis based on:</b> {{ article.source }}</p>
+                <p><b>Notes:</b> {{ article.source_notes }}</p>
+            </div>
+        </div>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </head>
+
+        <h2 style="padding: 0px 0">About article:</h2>
+        <button type="button" style="margin: 0px 0px 20px" class="btn btn-default" data-toggle="collapse"
+                data-target="#table-collapse">
+            Show extracted information
+        </button>
+        <div id="table-collapse" class="table-responsive collapse">
+            {#            <h1>Analysis result: {{ article.verdict }}</h1>#}
+            {#            <p>{{ article.source }}</p>#}
+            {#            <p>{{ article.description }}</p>#}
+            {#            <p>{{ article.source_notes }}</p>#}
+            {#      <p>{{ url }}</p>#}
+            <table class="table">
+                <tbody>
+                <tr>
+                    <td>Title</td>
+                    <td>{{ article.title }}</td>
+                </tr>
+                <tr>
+                    <td>Authors</td>
+                    <td>{{ article.authors }}</td>
+                </tr>
+                <tr>
+                    <td>Text</td>
+                    <td>{{ article.text }}</td>
+                </tr>
+                <tr>
+                    <td>Top Image</td>
+                    <td>
+                        <img src="{{ article.top_image }}"/>
+                        <p class="text-center"><a href="{{ article.top_image }}">{{ article.top_image }}</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Movies (Videos)</td>
+                    <td>{{ article.videos }}</td>
+                </tr>
+                <tr>
+                    <td>Keywords (NLP)</td>
+                    <td>{{ article.keywords }}</td>
+                </tr>
+                <tr>
+                    <td>Summary (NLP)</td>
+                    <td>{{ article.summary }}</td>
+                </tr>
+                <tr>
+                    <td>Article HTML</td>
+                    <td>
+              <pre>
+                <code class="language-markup">
+                  {{ article.html }}
+                </code>
+              </pre>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}

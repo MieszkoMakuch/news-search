@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="container landing-page" style="text-align: center">
+        <div class="row" style="padding-top: 100px">
+            <div class="col-md-8 col-md-offset-2">
+
+                <img src="../static/img/owl.png" style="max-width: 85%;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <form action="/search" method="get">
+                    <div class="form-group row" style="margin-top: 20px;">
+                        <div class="col-md-12">
+                            <input class="form-control input-lg" name="query" autofocus required>
+                        </div>
+                        <div class="col-md-12">
+                            <br>
+                            <button class="btn">Search news</button>
+                            <button class="btn" formaction="/search/lucky" style="margin-left: 20px;">I'm Feeling Lucky</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
