@@ -3,6 +3,7 @@ import numpy as np
 from nltk.stem.snowball import SnowballStemmer
 
 from news_search.config import Config, initialize_application_config
+from news_search.search_engine.indexer import Indexer
 
 
 def search(query):
@@ -12,8 +13,9 @@ def search(query):
 
     scipy_sparse_matrix = indexed_articles['matrix']
     matrix = scipy_sparse_matrix.toarray()
-    articles = indexed_articles["articles"]
-    terms = indexed_articles["terms"]
+    print(matrix.shape)
+    articles = indexed_articles['articles']
+    terms = indexed_articles['terms']
 
     tokens = tokenize_query(query)
     number_of_terms = len(terms)
@@ -35,7 +37,7 @@ def search(query):
 
 def tokenize_query(query):
     tokens = nltk.word_tokenize(query)
-    stammer = SnowballStemmer("english")
+    stammer = SnowballStemmer('english')
     tokens = [stammer.stem(x) for x in tokens]
     return tokens
 

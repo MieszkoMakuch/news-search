@@ -5,7 +5,7 @@ import sys
 import time
 import urllib
 
-from news_search.search_engine.initializer import Initializer
+from news_search.search_engine.crawler import Initializer
 
 
 class Config:

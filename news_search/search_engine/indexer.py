@@ -55,12 +55,13 @@ class Indexer:
             idf = np.log(docs / nw)
             self.bag_of_words[:, i] *= idf
 
-    def singular_value_decomposition(self, k):
-        u, s, v = np.linalg.svd(self.bag_of_words, full_matrices=False)
-        a = np.zeros(self.bag_of_words.shape)
+    @staticmethod
+    def singular_value_decomposition(bag_of_words, k):
+        u, s, v = np.linalg.svd(bag_of_words, full_matrices=False)
+        a = np.zeros(bag_of_words.shape)
         for i in range(k):
             a += s[i] * np.outer(u.T[i], v[i])
-        self.bag_of_words = a
+        return a
 
     @staticmethod
     def get_terms(text):
