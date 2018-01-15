@@ -20,7 +20,7 @@ except:
     log.error(ex.message)
 
 t = threading.Thread(target=prevent_herokuapp_from_sleeping, args=())
-t.start()
+# t.start()
 
 
 @app.route('/')
