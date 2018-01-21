@@ -5,7 +5,7 @@ import threading
 from flask import Flask, request, render_template, redirect, url_for
 
 from news_search.fakenews_detector import analyze_article
-from news_search.config import Config, initialize_application_config, prevent_herokuapp_from_sleeping
+from news_search.config import Config, initialize_application_config  #, prevent_herokuapp_from_sleeping
 from news_search.search_engine import search_engine
 
 app = Flask(__name__)
@@ -19,7 +19,7 @@ except:
     _, ex, _ = sys.exc_info()
     log.error(ex.message)
 
-t = threading.Thread(target=prevent_herokuapp_from_sleeping, args=())
+# t = threading.Thread(target=prevent_herokuapp_from_sleeping, args=())
 # t.start()
 
 
