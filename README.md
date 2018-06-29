@@ -19,10 +19,10 @@ News search engine with fake news detection implemented in Python using micro we
 ### Search results:
 ![](https://raw.githubusercontent.com/MieszkoMakuch/news-search/master/readme-files/search-results.png)
 
-### Example fake news analysis:
+### Example analysis (real news):
 ![](https://raw.githubusercontent.com/MieszkoMakuch/news-search/master/readme-files/real-news.png)
 
-### Example fake news analysis:
+### Example analysis (watch out):
 ![](https://raw.githubusercontent.com/MieszkoMakuch/news-search/master/readme-files/watch-out.png)
 
 ## Technologies used
