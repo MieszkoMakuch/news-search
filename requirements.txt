@@ -1,6 +1,6 @@
 wikipedia>=1.4.0
 BeautifulSoup4==4.4
-Flask==0.10.1
+Flask==1.0
 Jinja2==2.7.3
 MarkupSafe==0.23
 Pillow>=4.3
