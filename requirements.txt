@@ -7,7 +7,7 @@ Pillow>=4.3
 Werkzeug==0.9.6
 argparse==1.2.1
 cssselect==0.9.1
-gunicorn==19.1.1
+gunicorn==19.5.0
 itsdangerous==0.24
 lxml==3.4.0
 newspaper3k==0.1.9
